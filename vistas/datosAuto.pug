@@ -1,0 +1,21 @@
+extends layout.pug 
+block title 
+    title Mostrar Datos
+block contenido
+    if ingresado
+        h1 Dueño Ingresado
+    else 
+        h1 Dueño encontrado 
+    br
+    br
+    p Nombre: #{Nombre}
+    br
+    p Patente: #{Patente}
+    br 
+    p Color: #{Color}
+    br 
+    p Marca: #{Marca}
+    br 
+    p Modelo: #{Modelo}
+    br
+    a(href="/index") Ir a formulario 

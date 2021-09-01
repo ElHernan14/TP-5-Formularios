@@ -1,0 +1,11 @@
+extends layout.pug 
+block title  
+    title Buscar 
+block contenido 
+    br
+    form(action="buscarform", method="post")
+        |Ingrese patente: 
+        label(for="patente")
+        input(type="text", name="patente", id="patente")
+        br 
+        input(type="submit", value="Buscar")

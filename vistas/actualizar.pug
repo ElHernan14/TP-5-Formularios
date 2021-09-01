@@ -1,0 +1,68 @@
+extends layout.pug 
+block title  
+    title Borrar 
+block contenido
+    br
+    form(action="actualizarform", method="post")
+        |Ingrese patente: 
+        label(for="patente")
+        input(type="text", name="patente", id="patente")
+        br 
+        input(type="submit", value="buscar para actualizar")
+        br
+        br
+        br
+    form(action="actualizarformauto", method="post", style =(valor ? "display: block;" : "display: none;"))
+        |Ingrese Dueño del auto:
+        label(for="nombre")
+        input(type="text", name="nombre", id="nombre")
+        br
+        |Ingrese patente: 
+        label(for="patente")
+        input(type="text", name="patente", id="patente")
+        br
+        |Ingrese un color: 
+        input(type="color", name="color",id="color")
+        br
+        br
+        select#marca(name="marca", onclick="agregar()") 
+            option(value="Seleccione",selected,name="marca") Seleccione una marca
+            each x in marcas
+                option(value=x,name="marca") #{x}
+        br
+        br
+        select#modelo(name="modelo",value = (false)) 
+            option(value="Seleccione",selected,name="modelo") Seleccione un modelo   
+        br
+        br
+        input(type="submit", value="Enviar")
+    script.
+                
+        let url = "http://localhost:8888/modelos";
+        let myObjectJSON = {};
+        let xmlhttp = new XMLHttpRequest();              
+        var selectMarca = document.getElementById('marca');
+        var selectModelo = document.getElementById('modelo');
+        function agregar(){
+            xmlhttp.onreadystatechange = ()=>{
+                if (xmlhttp.readyState === 4 && (xmlhttp.status === 200 || xmlhttp.status === 0)) {
+                    myObjectJSON = JSON.parse(xmlhttp.responseText);                           
+                }
+            }
+            xmlhttp.open("GET",url,true);
+            xmlhttp.send(null);
+        }
+        selectMarca.addEventListener('change',()=>{     
+            let marca = selectMarca.options[selectMarca.selectedIndex].value;
+            selectModelo.innerHTML = '';
+            for(let x of myObjectJSON.marcas){
+                if(marca == x.nombre){
+                    for(let value of x.modelos){
+                        let option = document.createElement("option");
+                        option.value = value;
+                        option.text = value;
+                        selectModelo.add(option);
+                    }
+                }
+            }              
+        });

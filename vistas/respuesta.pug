@@ -1,0 +1,12 @@
+extends layout.pug 
+block title 
+    if borrado
+        title Dueño borrado
+    else
+        title Dni ya existente
+block contenido 
+    if borrado
+        h1 Los datos fueron borrados 
+    else
+        h1 Los datos fueron actualizados
+    a(href="/") Volver al inicio

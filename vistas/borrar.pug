@@ -1,0 +1,12 @@
+extends layout.pug 
+block title  
+    title Borrar 
+block contenido
+    br
+    form(action="borrarform", method="post")
+        |Ingrese patente: 
+        label(for="patente")
+        input(type="text", name="patente", id="patente")
+        br 
+        input(type="submit", value="Borrar")
+

@@ -1,0 +1,119 @@
+{
+    
+    "marcas": [
+      {
+        "id": 1,
+        "nombre": "Audi",
+        "modelos": [
+          "A5",
+          "A3",
+          "A4",
+          "A6"
+        ]
+      },
+      {
+        "id": 2,
+        "nombre": "BMW",
+        "modelos": [
+          "Serie 6",
+          "Serie 7",
+          "Z4",
+          "M6"
+        ]
+      },
+      {
+        "id": 4,
+        "nombre": "Citroen",
+        "modelos": [
+          "Xsara",
+          "Picasso",
+          "C3",
+          "C5",
+          "Xsara",
+          "DS3",
+          "DS4",
+          "DS5",
+          "C-Elysee",
+          "Aircross",
+          "C4",
+          "C3"
+        ]
+      },
+      {
+        "id": 5,
+        "nombre": "Daihatsu",
+        "modelos": [
+          "Charade",
+          "Charmant",
+          "Sirion",
+          "Materia",
+          "Terios",
+          "F20",
+          "Feroza",
+          "Rocky",
+          "Delta",
+          "V126"
+        ]
+      },
+      {
+        "id": 6,
+        "nombre": "Dodge",
+        "modelos": [
+          "Coronet",
+          "Dart",
+          "Demon",
+          "D100",
+          "Royal",
+          "Journey",
+          "Caliber",
+          "Fargo",
+          "Durango",
+          "300",
+          "600",
+          "900",
+          "500",
+          "Ram",
+          "D100",
+          "Dakota",
+          "Caravan"
+        ]
+      },
+      {
+        "id": 8,
+        "nombre": "Ford",
+        "modelos": [
+          "Fiesta",
+          "Focus",
+          "Granada",
+          "Laser",
+          "Mustang",
+          "Taurus",
+          "Hot",
+          "Rod",
+          "Escort",
+          "Ltd",
+          "555E",
+          "Chiva",
+          "Ecosport",
+          "Panel",
+          "Edge",
+          "Flex",
+          "Courier",
+          "Escape",
+          "Expedition",
+          "Explorer",
+          "Llanero",
+          "Aeromax",
+          "Cargo 816",
+          "F250",
+          "Nueva",
+          "Ranger",
+          "Explorer",
+          "F100",
+          "F-150",
+          "F350",
+          "Ranger"
+        ]
+      }
+    ]
+  }

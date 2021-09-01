@@ -1,0 +1,19 @@
+extends layout.pug 
+block title 
+    title Mostrar Personas 
+block contenido 
+    table.table.table-dark.table-striped
+        thead
+            tr
+                th(scope='col') Patente
+                th(scope='col') Color
+                th(scope='col') Nombre
+                th(scope='col') Marca
+                th(scope='col') Modelo
+        each value in listaDueños 
+            tr
+                td= value.patente
+                td= value.color
+                td= value.nombre  
+                td= value.marca 
+                td= value.modelo 
